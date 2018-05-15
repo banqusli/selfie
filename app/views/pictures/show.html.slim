@@ -3,18 +3,18 @@
 
 p
   .strong
-    Title:
+    | Title:
   = @picture.title
 
 p
   .strong
-    Description:
+    | Description:
   = @picture.description
 
 p
   .strong
-    Selfie user:
+    | Selfie user:
   = @picture.selfie_user
 
-= link_to 'Edit', edit_picture_path(@picture) |
+= link_to 'Edit', edit_picture_path(@picture)
 = link_to 'Back', pictures_path
