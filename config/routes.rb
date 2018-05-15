@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :selfie_users
   get 'dashboard/index'
   root 'dashboard#index'
   devise_for :users

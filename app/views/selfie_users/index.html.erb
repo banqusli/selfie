@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Selfie Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @selfie_users.each do |selfie_user| %>
+      <tr>
+        <td><%= selfie_user.name %></td>
+        <td><%= selfie_user.email %></td>
+        <td><%= selfie_user.user %></td>
+        <td><%= link_to 'Show', selfie_user %></td>
+        <td><%= link_to 'Edit', edit_selfie_user_path(selfie_user) %></td>
+        <td><%= link_to 'Destroy', selfie_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Selfie User', new_selfie_user_path %>
