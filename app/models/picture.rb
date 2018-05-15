@@ -1,3 +1,3 @@
 class Picture < ApplicationRecord
-  belongs_to :selfie_user
+  belongs_to :user
 end

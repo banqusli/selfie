@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515085854) do
+ActiveRecord::Schema.define(version: 20180515114806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,9 @@ ActiveRecord::Schema.define(version: 20180515085854) do
   create_table "pictures", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.bigint "selfie_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["selfie_user_id"], name: "index_pictures_on_selfie_user_id"
+    t.integer "user_id"
   end
 
   create_table "selfie_users", force: :cascade do |t|
@@ -50,6 +49,5 @@ ActiveRecord::Schema.define(version: 20180515085854) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "pictures", "selfie_users"
   add_foreign_key "selfie_users", "users"
 end
