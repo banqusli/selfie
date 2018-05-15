@@ -1,9 +1,11 @@
-h1.text-center
-  | Wilcome in Selfie
-.container.text-center
-  .col-md-12
-    = link_to 'Sign Up', new_user_registration_url, class: 'btn btn-primary'
-br
-.container.text-center
-  .col-md-12
-    = link_to 'Login', new_user_session_url, class: 'btn btn-primary'
+
+- if !user_signed_in?
+  h1.text-center
+    | Wilcome in Selfie
+  .container.text-center
+    .col-md-12
+      = link_to 'Sign Up', new_user_registration_url, class: 'btn btn-primary'
+  br
+  .container.text-center
+    .col-md-12
+      = link_to 'Login', new_user_session_url, class: 'btn btn-primary'
