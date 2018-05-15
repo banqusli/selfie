@@ -1,0 +1,23 @@
+#notice
+  = notice
+h1
+  | Pictures
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Selfie user
+
+  tbody
+    - @pictures.each do |picture|
+      tr
+        td = picture.title
+        td = picture.description
+        td = picture.selfie_user
+        td = link_to 'Show', picture
+        td = link_to 'Edit', edit_picture_path(picture)
+        td = link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Picture', new_picture_path
