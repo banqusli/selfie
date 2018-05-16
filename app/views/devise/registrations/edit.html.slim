@@ -6,6 +6,7 @@ h2
   = f.error_notification
 
   .form-inputs
+    = f.input :name, required: false
     = f.input :email, required: true, autofocus: true
 
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
