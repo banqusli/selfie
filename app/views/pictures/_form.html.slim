@@ -6,6 +6,6 @@
   .form-inputs
     = f.input :title
     = f.input :description
-    = f.association :user, value: @user
+    = f.hidden_field :user_id, value: current_user.id
   .form-actions
     = f.button :submit
