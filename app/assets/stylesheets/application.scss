@@ -15,3 +15,118 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: #DADADA;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #0b386b;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  a {
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#pic {
+  width: 100%;
+  .box {
+    width: 350px;
+    margin: 7px;
+    box-shadow: #666666;
+    border-radius: 2px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    a {
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#edit {
+  .current_image {
+    img {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+}
+
+#show {
+  .panel-heading {
+    padding: 0;
+  }
+  .pic_image {
+    img {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+    }
+    .panel-body {
+      padding: 35px;
+      h1 {
+        color: #B00100;
+        font-weight: bold;
+      }
+      .description {
+        color: #2E2F30;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+      }
+      .panel-footer {
+        padding: 50px 50px;
+        p {
+
+        }
+        .user {
+          text-align: left;
+          padding-top: 2px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+textarea {
+  min-height: 250px;
+}
+
+#link {
+  a {
+    text-decoration: none;
+  }
+}
+
+.panel-body {
+  padding-bottom: unset;
+  padding-top: 6px;
+  margin-bottom: unset;
+}
+
+.panel-footer {
+  padding-bottom: 12px;
+}
+
+
+.panel-default {
+
+}

@@ -15,8 +15,8 @@ table
       tr
         td = picture.title
         td = picture.description
-        td = picture.user_id
-        td = link_to 'Show', picture
+        td = picture.user.name
+        td#link = link_to 'Show', picture
         td = link_to 'Edit', edit_picture_path(picture)
         td = link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }
 br
