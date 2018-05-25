@@ -3,14 +3,17 @@ h1
 
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = f.error_notification
-
-  .form-inputs
-    = f.input :name, required: true, autofocus: true
-    = f.input :email, required: true, autofocus: true
-    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, required: true
-
-  .form-actions
-    = f.button :submit, 'Sign up'
-
-= render 'devise/shared/links'
+  .col-md-4.col-md-offset-4
+    .row
+      .panel.panel-default
+        .panel-heading
+          .form-inputs
+            = f.input :name, required: true, autofocus: true, label: 'Name &nbsp;'.html_safe
+            = f.input :email, required: true, autofocus: true, label: 'Email &nbsp;'.html_safe
+            = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: 'Password &nbsp;'.html_safe
+            = f.input :password_confirmation, required: true, label: 'Conform Password &nbsp;'.html_safe
+    .row
+      .panel.panel-default
+        .panel-footer
+          .form-actions
+            = f.button :submit, 'Sign up', class: 'btn btn-info'

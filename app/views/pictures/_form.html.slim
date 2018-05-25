@@ -4,9 +4,10 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .form-inputs
-    = f.input :title
-    = f.input :description
+    = f.input :title, label: 'Title &nbsp;'.html_safe
+    = f.input :description, label: 'Description &nbsp;'.html_safe
     = f.hidden_field :user_id, value: current_user.id
+    br
     .row
       .panel.panel-default
         .panel-footer
