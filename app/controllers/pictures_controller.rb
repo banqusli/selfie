@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :set_picture, only: [:show, :edit, :update, :destroy, :upvote]
 
   # GET /pictures
   # GET /pictures.json
@@ -19,6 +19,12 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
+  end
+
+  def upvote
+    @picture = Picture.find(params[:id])
+    @picture.upvote_by current_user
+    redirect_back fallback_location: pictures_path
   end
 
   # POST /pictures
@@ -70,6 +76,6 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:title, :description, :user_id)
+      params.require(:picture).permit(:image, :title, :description, :user_id)
     end
 end
