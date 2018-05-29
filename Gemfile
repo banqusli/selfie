@@ -38,6 +38,9 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 gem 'simple_form', '~> 4.0'
 gem 'slim', '~> 3.0', '>= 3.0.9'
+gem 'paperclip', '~> 6.0.0'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'acts_as_votable', '~> 0.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
