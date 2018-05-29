@@ -1,23 +1,29 @@
-#notice
-  = notice
 h1
   | Pictures
-
-table
-  thead
-    tr
-      th Title
-      th Description
-      th Selfie user
-
-  tbody
-    - @pictures.each do |picture|
-      tr
-        td = picture.title
-        td = picture.description
-        td = picture.user.name
-        td#link = link_to 'Show', picture
-        td = link_to 'Edit', edit_picture_path(picture)
-        td = link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }
 br
-= link_to 'New Picture', new_picture_path
+#notice.text-center
+  = notice
+.col-md-4.col-md-offset-4
+  .row
+    #pic.transitions-enabled
+      - @pictures.each do |picture|
+        .panel.panel-default
+          h3.panel-heading.text-center
+            = picture.title
+          .panel-body
+            .text-center
+              = link_to (image_tag picture.image.url), picture
+            .text-left
+              = picture.description
+          .panel-footer
+            .text-center
+              .le.text-left
+                = link_to like_picture_path(picture), method: :put, class: 'glyphicon glyphicon-thumbs-up' do
+                  .span.glyphicon.glyphicon.thumbs.up
+                = picture.get_upvotes.size
+                |
+                = picture.user.email
+              .le.text-right
+                = link_to 'Show', picture, class: 'btn btn-info'
+                = link_to 'Edit', edit_picture_path(picture), class: 'btn btn-success'
+                = link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

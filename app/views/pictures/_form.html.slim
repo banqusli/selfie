@@ -4,6 +4,7 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .form-inputs
+    = f.input :image, as: :file
     = f.input :title, label: 'Title &nbsp;'.html_safe
     = f.input :description, label: 'Description &nbsp;'.html_safe
     = f.hidden_field :user_id, value: current_user.id

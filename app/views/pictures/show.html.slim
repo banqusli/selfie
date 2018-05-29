@@ -1,20 +1,18 @@
-#notice
-  = notice
-
-p
-  .strong
-    | Title:
-  = @picture.title
-
-p
-  .strong
-    | Description:
-  = @picture.description
-
-p
-  .strong
-    | Selfie user:
-  = @picture.user.name
-
-= link_to 'Edit', edit_picture_path(@picture)
-= link_to 'Back', pictures_path
+.col-md-4.col-md-offset-4
+  #show.row
+    .panel.panel-default
+      .panel-heading.text-center
+        h3
+          = @picture.title
+      .panel-body
+        = image_tag @picture.image(:medium)
+        br
+        | Description:
+        = @picture.description
+        br
+      .panel-footer
+        .le.text-left
+          | Selfie user:
+          = @picture.user.email
+        .le.text-right
+          = link_to 'Edit', edit_picture_path(@picture), class: 'btn btn-success'
