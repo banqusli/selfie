@@ -17,12 +17,11 @@ br
               = picture.description
           .panel-footer
             .text-center
-              .le.text-left
+              #link.le.text-left
                 = link_to like_picture_path(picture), method: :put, class: 'glyphicon glyphicon-thumbs-up' do
                   .span.glyphicon.glyphicon.thumbs.up
                 = picture.get_upvotes.size
-                |
-                = picture.user.email
+                = '   '.html_safe + picture.user.name
               .le.text-right
                 = link_to 'Show', picture, class: 'btn btn-info'
                 = link_to 'Edit', edit_picture_path(picture), class: 'btn btn-success'
