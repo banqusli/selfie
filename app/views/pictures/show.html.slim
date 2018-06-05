@@ -13,6 +13,7 @@
       .panel-footer
         .le.text-left
           | Selfie user:
-          = @picture.user.email
+          = @picture.user.name
+      - if user_signed_in?
         .le.text-right
           = link_to 'Edit', edit_picture_path(@picture), class: 'btn btn-success'

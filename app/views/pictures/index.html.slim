@@ -15,6 +15,7 @@ br
               = link_to (image_tag picture.image.url), picture
             .text-left
               = picture.description
+        - if user_signed_in?
           .panel-footer
             .text-center
               #link.le.text-left
