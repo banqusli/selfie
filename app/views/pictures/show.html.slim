@@ -4,16 +4,13 @@
       .panel-heading.text-center
         h3
           = @picture.title
-      .panel-body
+      .panel-body.text-center
         = image_tag @picture.image(:medium)
         br
-        | Description:
         = @picture.description
         br
       .panel-footer
         .le.text-left
           | Selfie user:
           = @picture.user.name
-      - if user_signed_in?
-        .le.text-right
-          = link_to 'Edit', edit_picture_path(@picture), class: 'btn btn-success'
+
