@@ -2,24 +2,27 @@ require 'test_helper'
 
 class PicturesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @picture = pictures(:one)
+    @user = create :user
+    @picture = create :picture, user: @user
+
+    sign_in @user
   end
 
   test "should get index" do
-    get pictures_url
+    get picture_url(@picture)
     assert_response :success
   end
 
   test "should get new" do
-    get new_picture_url
+    get new_picture_url(@picture)
     assert_response :success
   end
 
   test "should create picture" do
+    image = fixture_file_upload('missing.png', 'image/png')
     assert_difference('Picture.count') do
-      post pictures_url, params: { picture: { description: @picture.description, selfie_user_id: @picture.selfie_user_id, title: @picture.title } }
+      post pictures_url, params: { picture: { user_id: @picture.user_id, description: @picture.description, image: image, title: @picture.title } }
     end
-
     assert_redirected_to picture_url(Picture.last)
   end
 
@@ -34,7 +37,8 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update picture" do
-    patch picture_url(@picture), params: { picture: { description: @picture.description, selfie_user_id: @picture.selfie_user_id, title: @picture.title } }
+    image = fixture_file_upload('missing.png', 'image/png')
+    patch picture_url(@picture), params: { picture: { description: @picture.description, image: image, title: @picture.title } }
     assert_redirected_to picture_url(@picture)
   end
 
@@ -42,7 +46,6 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Picture.count', -1) do
       delete picture_url(@picture)
     end
-
     assert_redirected_to pictures_url
   end
 end

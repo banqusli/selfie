@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :authenticate_user!, except: [:index, :new]
 
   # GET /pictures
   # GET /pictures.json
@@ -47,7 +48,7 @@ class PicturesController < ApplicationController
   # PATCH/PUT /pictures/1.json
   def update
     respond_to do |format|
-      if @picture.update(picture_params)
+      if @picture.update(picture_update_params)
         format.html { redirect_to @picture, notice: 'Picture was successfully updated.' }
         format.json { render :show, status: :ok, location: @picture }
       else
@@ -77,5 +78,9 @@ class PicturesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
       params.require(:picture).permit(:image, :title, :description, :user_id)
+    end
+
+    def picture_update_params
+      params.require(:picture).permit(:image, :title, :description)
     end
 end
