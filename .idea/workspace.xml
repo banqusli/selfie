@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68633139-cd46-48a5-bb34-d1e81f40975b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/pictures/_form.html.slim" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/index.html.slim" afterPath="$PROJECT_DIR$/app/views/pictures/index.html.slim" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/show.html.slim" afterPath="$PROJECT_DIR$/app/views/pictures/show.html.slim" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/010/medium/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/010/original/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/010/thumb/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/011/medium/Screen_Shot_2018-05-24_at_11.47.04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/011/original/Screen_Shot_2018-05-24_at_11.47.04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/011/thumb/Screen_Shot_2018-05-24_at_11.47.04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/012/medium/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/012/original/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/012/thumb/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/014/medium/Screen_Shot_2018-05-24_at_11.47.25.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/014/original/Screen_Shot_2018-05-24_at_11.47.25.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/014/thumb/Screen_Shot_2018-05-24_at_11.47.25.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/015/medium/Screen_Shot_2018-05-24_at_11.47.25.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/015/original/Screen_Shot_2018-05-24_at_11.47.25.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/015/thumb/Screen_Shot_2018-05-24_at_11.47.25.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/016/medium/Screen_Shot_2018-05-24_at_11.47.04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/016/original/Screen_Shot_2018-05-24_at_11.47.04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/016/thumb/Screen_Shot_2018-05-24_at_11.47.04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/018/medium/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/018/original/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/018/thumb/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/019/medium/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/019/original/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/019/thumb/Screen_Shot_2018-05-17_at_14.13.22.png" afterPath="" />
-    </list>
+    <list default="true" id="68633139-cd46-48a5-bb34-d1e81f40975b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -46,11 +17,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pictures/index.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="160">
               <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pictures_controller_test.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/controllers/pictures_controller_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/pictures/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -159,9 +140,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,14 +164,18 @@
             <path>
               <item name="selfie" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfie" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pictures" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="selfie" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfie" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfie" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -337,11 +322,12 @@
       <workItem from="1527252085153" duration="2825000" />
       <workItem from="1527574122244" duration="9859000" />
       <workItem from="1528182115448" duration="882000" />
+      <workItem from="1528187846274" duration="70000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56375000" />
+    <option name="totallyTimeSpent" value="56445000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -356,7 +342,7 @@
     <frame x="329" y="55" width="1280" height="586" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2657512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -546,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/pictures_controller_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/factories/pictures.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -652,9 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding>
-            <marker date="1527590086000" expanded="true" signature="2822:2828" ph="do ... end" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -719,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,15 +717,23 @@
     <entry file="file://$PROJECT_DIR$/app/views/pictures/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pictures/index.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="160">
           <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/pictures_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

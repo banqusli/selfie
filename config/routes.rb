@@ -4,7 +4,6 @@ Rails.application.routes.draw do
       put 'like', to: 'pictures#upvote'
     end
   end
-  resources :selfie_users
   get 'index', to: 'dashboard#index'
   root 'dashboard#index'
   devise_for :users
