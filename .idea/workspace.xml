@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="68633139-cd46-48a5-bb34-d1e81f40975b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change beforePath="$PROJECT_DIR$/app/controllers/pictures_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pictures_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboard/error.html.slim" afterPath="$PROJECT_DIR$/app/views/dashboard/error.html.slim" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/index.html.slim" afterPath="$PROJECT_DIR$/app/views/pictures/index.html.slim" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/020/medium/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/020/original/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/020/thumb/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/418/medium/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/418/original/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/system/pictures/images/000/000/418/thumb/best-action-photos-2016-red-bull-illume-48-57f6150f74455__880.jpg" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -73,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pictures/index.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
@@ -103,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pictures_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pictures_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/pictures_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="66" column="54" lean-forward="false" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
+            <state relative-caret-position="135">
+              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -168,10 +158,10 @@
         <option value="$PROJECT_DIR$/app/views/pictures/_picture.json.jbuilder" />
         <option value="$PROJECT_DIR$/test/controllers/pictures_controller_test.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/error.html.slim" />
-        <option value="$PROJECT_DIR$/app/controllers/pictures_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
         <option value="$PROJECT_DIR$/app/views/pictures/index.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/pictures_controller.rb" />
       </list>
     </option>
   </component>
@@ -485,7 +475,7 @@
       <workItem from="1527574122244" duration="9859000" />
       <workItem from="1528182115448" duration="882000" />
       <workItem from="1528187846274" duration="19311000" />
-      <workItem from="1528266325778" duration="20400000" />
+      <workItem from="1528266325778" duration="22186000" />
     </task>
     <servers />
   </component>
@@ -522,7 +512,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96086000" />
+    <option name="totallyTimeSpent" value="97872000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -904,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pictures_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="66" column="54" lean-forward="false" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/controllers/pictures_controller_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -940,6 +922,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pictures_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
           <folding />
         </state>
       </provider>
