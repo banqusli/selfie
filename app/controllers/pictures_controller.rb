@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :authenticate_user!, except: [:index, :new]
+  before_action :control_users!, only: [:destroy, :update]
 
   # GET /pictures
   # GET /pictures.json
@@ -38,8 +39,8 @@ class PicturesController < ApplicationController
         format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
         format.json { render :show, status: :created, location: @picture }
       else
-        format.html { render :new }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity}
+        format.json { render json: @picture.errors, status: :unprocessable_entity}
       end
     end
   end

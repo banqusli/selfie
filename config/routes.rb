@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       put 'like', to: 'pictures#upvote'
     end
   end
+  get 'error', to: 'dashboard#error'
   get 'index', to: 'dashboard#index'
   root 'dashboard#index'
   devise_for :users

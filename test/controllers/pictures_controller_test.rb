@@ -5,11 +5,19 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     @user = create :user
     @picture = create :picture, user: @user
 
+    @other_user = create :user
+    @others_pictures = create :picture, user: @other_user
+
     sign_in @user
   end
 
   test "should get index" do
     get picture_url(@picture)
+    assert_response :success
+  end
+
+  test "should get index for json" do
+    get picture_url(@picture), params: {format: :json}
     assert_response :success
   end
 
@@ -42,10 +50,23 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to picture_url(@picture)
   end
 
+  test "should not update picture for others" do
+    image = fixture_file_upload('missing.png', 'image/png')
+    patch picture_url(@others_pictures), params: { picture: { description: @picture.description, image: image, title: @picture.title } }
+    assert_redirected_to error_url
+  end
+
   test "should destroy picture" do
     assert_difference('Picture.count', -1) do
       delete picture_url(@picture)
     end
     assert_redirected_to pictures_url
+  end
+
+  test "should not destroy picture for others" do
+    assert_no_difference('Picture.count') do
+      delete picture_url(@others_pictures)
+    end
+    assert_redirected_to error_url
   end
 end
