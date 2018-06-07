@@ -13,9 +13,11 @@
  *= require commontator/application
  * require_tree .
  * require_self
+ *@import "materialize";
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 
 body {
   background-color: #DADADA;
@@ -31,6 +33,17 @@ h1, h2 {
   a {
     font-weight: bold;
     font-size: 24px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.navbar-brand-1 {
+  a {
+    font-weight: bold;
+    font-size: 18px;
     text-decoration: none;
     &:hover {
       text-decoration: none;
