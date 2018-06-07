@@ -16,6 +16,7 @@ body
       - if user_signed_in?
         ul.nav.navbar-nav.navbar-right
           li = link_to 'Photo', new_picture_url
+          li = link_to 'Profile', index_url
           li = link_to 'Settings', edit_user_registration_path
           li = link_to 'Sign out', destroy_user_session_path, :method => :delete
       - else

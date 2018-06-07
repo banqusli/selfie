@@ -15,4 +15,11 @@ class ApplicationController < ActionController::Base
         redirect_to error_url, warning: 'you dont have permission for it'
     end
   end
+
+  def query_filter(objects)
+    if user_signed_in?
+      filted = objects.where(:user_id => current_user.id)
+    end
+    return filted
+  end
 end

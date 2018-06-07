@@ -1,4 +1,3 @@
-
 - if !user_signed_in?
   h1.text-center
     | Wilcome in Selfie
@@ -9,3 +8,24 @@
   .container.text-center
     .col-md-12
       = link_to 'Login', new_user_session_url, class: 'btn btn-primary'
+.col-md-4.col-md-offset-4
+  .row
+    #pic.transitions-enabled
+      - if user_signed_in?
+        - @picture.each do |picture|
+          .panel.panel-default
+            h3.panel-heading.text-center
+              = picture.title
+            .panel-body
+              .text-center
+                = link_to (image_tag picture.image.url), picture
+              .text-left
+                = picture.description
+            .panel-footer
+              .text-center
+                #link.le.text-left
+                  = '   '.html_safe + picture.user.name
+                .le.text-right
+                  = link_to 'Show', picture, class: 'btn btn-info'
+                  = link_to 'Edit', edit_picture_path(picture), class: 'btn btn-success'
+                  = link_to 'Destroy', picture, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'
