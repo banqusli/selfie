@@ -78,7 +78,6 @@ h1, h2 {
     img {
       max-width: 100%;
       width: 100%;
-      display: block;
     }
     .panel-body {
       padding: 35px;
@@ -109,6 +108,13 @@ h1, h2 {
 
 textarea {
   min-height: 250px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 #link {
@@ -121,12 +127,20 @@ textarea {
   padding-bottom: unset;
   padding-top: 6px;
   margin-bottom: unset;
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 }
 
 .panel-footer {
   padding-bottom: 12px;
 }
-
 
 .panel-default {
 
@@ -150,4 +164,18 @@ textarea {
     max-width: 600px;
     max-height: 600px;
   }
+}
+
+.select-image{
+  width: 100%;
+}
+
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
