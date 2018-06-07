@@ -14,5 +14,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require masonry/jquery.masonry
+//= require commontator/application
 //= require turbolinks
 //= require_tree .

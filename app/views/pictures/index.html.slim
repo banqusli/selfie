@@ -27,3 +27,8 @@ br
                   = link_to 'Show', picture, class: 'btn btn-info'
                   = link_to 'Edit', edit_picture_path(picture), class: 'btn btn-success'
                   = link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+          #link.panel-footer
+            .text-left.le1
+              = commontator_thread(picture) + '     '.html_safe
+            .text-right.display-in-same-line
+              = l picture.created_at
