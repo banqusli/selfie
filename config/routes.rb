@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notifications
   resources :pictures do
     member do
       put 'like', to: 'pictures#upvote'

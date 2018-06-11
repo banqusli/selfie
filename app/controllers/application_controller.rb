@@ -22,4 +22,11 @@ class ApplicationController < ActionController::Base
     end
     return filted
   end
+
+  def set_notifications
+      User.all.each do |user|
+        @notification = Notification.create(user: current_user, receiver: user, action: 'post', info: 'posted a Picture')
+        @notification.save
+      end
+  end
 end

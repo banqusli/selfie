@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
   def index
     @picture = query_filter(Picture.all)
-    #@pictures = @picture.where(:user_id == current_user.id)
+    @pictures = @pictures&.order(created_at: :desc)
   end
 
   def error

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180607083546) do
+ActiveRecord::Schema.define(version: 20180611091303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,17 @@ ActiveRecord::Schema.define(version: 20180607083546) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "receiver_id"
+    t.string "action"
+    t.string "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_notifications_on_receiver_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -99,5 +110,7 @@ ActiveRecord::Schema.define(version: 20180607083546) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
+  add_foreign_key "notifications", "users"
+  add_foreign_key "notifications", "users", column: "receiver_id"
   add_foreign_key "pictures", "users"
 end
