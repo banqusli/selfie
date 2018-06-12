@@ -18,13 +18,14 @@ class ApplicationController < ActionController::Base
 
   def query_filter(objects)
     if user_signed_in?
-      filted = objects.where(:user_id => current_user.id)
+      filted = objects.where(user_id: current_user.id)
+      filted.order(created_at: :desc)
     end
-    return filted
+    #return filted
   end
 
   def set_notifications_for_create
-    User.all.each do |user|
+    (User.all.uniq - [current_user]).each do |user|
       @notification = Notification.create(user: current_user, receiver: user, action: 'post', info: 'posted a Picture', picture: @picture)
       @notification.save
     end

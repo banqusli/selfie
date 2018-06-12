@@ -22,11 +22,14 @@ br
                   .span.glyphicon.glyphicon.thumbs.up
                 = picture.get_upvotes.size
                 = '   '.html_safe + picture.user.name
-              .le.text-right
+              #link.le.text-right
                 - if picture.user_id == current_user.id
-                  = link_to 'Show', picture, class: 'btn btn-info'
-                  = link_to 'Edit', edit_picture_path(picture), class: 'btn btn-success'
-                  = link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+                  .wid
+                    = link_to '', picture, class: 'glyphicon glyphicon-eye-open'
+                  .wid
+                    = link_to '', edit_picture_path(picture), class: 'glyphicon glyphicon-pencil'
+                  .wid
+                    = link_to '', picture, method: :delete, data: { confirm: 'Are you sure?' }, class: 'glyphicon glyphicon-trash'
           #link.panel-footer
             .text-left.le1
               = commontator_thread(picture) + '     '.html_safe

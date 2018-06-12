@@ -28,7 +28,9 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
     @picture.upvote_by current_user
     redirect_back fallback_location: pictures_path
-    if current_user.voted_up_on?(@picture)
+    if current_user == @picture.user
+      return true
+    else current_user.voted_up_on?(@picture)
       @notification = Notification.create(:user_id => current_user.id, :receiver_id => @picture.user_id, :action => 'like', :info => 'liked your Picture', picture: @picture)
       @notification.save
     end

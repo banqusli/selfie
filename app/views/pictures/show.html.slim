@@ -11,6 +11,9 @@
         br
       .panel-footer
         .le.text-left
-          | Selfie user:
+          = link_to like_picture_path(@picture), method: :put, class: 'glyphicon glyphicon-thumbs-up' do
+            .span.glyphicon.glyphicon.thumbs.up
+          = @picture.get_upvotes.size
+        .le.text-right
           = @picture.user.name
 

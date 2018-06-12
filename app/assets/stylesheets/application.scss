@@ -161,6 +161,9 @@ textarea {
 .le {
   width: 290px;
   display:inline-block;
+  link{
+    padding-right: 2px;
+  }
 }
 
 .display-in-same-line {
@@ -191,4 +194,16 @@ input{
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+.bg{
+  background-color: #f0f0f0;
+}
+
+.bg1{
+  background-color: #BBBBBB;
+}
+
+.wid{
+  width: 50px;
+  display:inline-block;
 }
