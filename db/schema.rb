@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611091303) do
+ActiveRecord::Schema.define(version: 20180612063845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20180611091303) do
     t.string "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "picture_id"
+    t.index ["picture_id"], name: "index_notifications_on_picture_id"
     t.index ["receiver_id"], name: "index_notifications_on_receiver_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
@@ -110,6 +112,7 @@ ActiveRecord::Schema.define(version: 20180611091303) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
+  add_foreign_key "notifications", "pictures"
   add_foreign_key "notifications", "users"
   add_foreign_key "notifications", "users", column: "receiver_id"
   add_foreign_key "pictures", "users"

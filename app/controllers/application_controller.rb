@@ -23,10 +23,18 @@ class ApplicationController < ActionController::Base
     return filted
   end
 
-  def set_notifications
-      User.all.each do |user|
-        @notification = Notification.create(user: current_user, receiver: user, action: 'post', info: 'posted a Picture')
-        @notification.save
+  def set_notifications_for_create
+    User.all.each do |user|
+      @notification = Notification.create(user: current_user, receiver: user, action: 'post', info: 'posted a Picture', picture: @picture)
+      @notification.save
+    end
+  end
+
+  def delete_notifications
+    Notification.all.each do |delete|
+    if @picture == delete.picture
+      delete.destroy
       end
+    end
   end
 end

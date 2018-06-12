@@ -29,7 +29,7 @@ class PicturesController < ApplicationController
     @picture.upvote_by current_user
     redirect_back fallback_location: pictures_path
     if current_user.voted_up_on?(@picture)
-      @notification = Notification.create(:user_id => current_user.id, :receiver_id => @picture.user_id, :action => 'like', :info => 'liked your Picture')
+      @notification = Notification.create(:user_id => current_user.id, :receiver_id => @picture.user_id, :action => 'like', :info => 'liked your Picture', picture: @picture)
       @notification.save
     end
   end
@@ -41,13 +41,9 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.save
-        #@user.each do |user|
-         # @notification = Notification.create(:user_id => current_user.id, :receiver_id => user, :action => 'post', :info => 'posted a Picture')
-          #@notification.save
-          #end
+        set_notifications_for_create
         format.html { redirect_to @picture, success: 'Picture was successfully created.' }
         format.json { render :show, status: :created, location: @picture }
-        set_notifications
       else
         format.html { render :new, status: :unprocessable_entity}
         format.json { render json: @picture.errors, status: :unprocessable_entity}
@@ -72,8 +68,8 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
+    delete_notifications
     if @picture.destroy
-      #@notification.destroy
       respond_to do |format|
         format.html { redirect_to pictures_url, success: 'Picture was successfully destroyed.' }
         format.json { head :no_content }
