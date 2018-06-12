@@ -21,7 +21,6 @@ class ApplicationController < ActionController::Base
       filted = objects.where(user_id: current_user.id)
       filted.order(created_at: :desc)
     end
-    #return filted
   end
 
   def set_notifications_for_create

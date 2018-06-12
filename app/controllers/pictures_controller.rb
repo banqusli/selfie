@@ -31,7 +31,7 @@ class PicturesController < ApplicationController
     if current_user == @picture.user
       return true
     else current_user.voted_up_on?(@picture)
-      @notification = Notification.create(:user_id => current_user.id, :receiver_id => @picture.user_id, :action => 'like', :info => 'liked your Picture', picture: @picture)
+      @notification = Notification.create(user_id: current_user.id, receiver_id: @picture.user_id, action: 'like', info: 'liked your Picture', picture: @picture)
       @notification.save
     end
   end
