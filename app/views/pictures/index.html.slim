@@ -21,7 +21,7 @@ br
                 = link_to like_picture_path(picture), method: :put, class: 'glyphicon glyphicon-thumbs-up' do
                   .span.glyphicon.glyphicon.thumbs.up
                 = picture.get_upvotes.size
-                = '   '.html_safe + picture.user.name
+                = link_to " #{picture.user.name}", index_url(user: picture.user)
               #link.le.text-right
                 - if picture.user_id == current_user.id
                   .wid

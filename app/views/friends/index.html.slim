@@ -1,0 +1,47 @@
+h1
+  | Friends
+
+.col-md-4.col-md-offset-4
+  .row
+    - @frienden.each do |f|
+      - if f.status == 'waiting'
+        .panel.panel1#link
+          .text-left.le
+            = link_to "#{f.user.name}", index_url(user: f.user)
+          .text-right.le
+            = link_to 'Accept', friends_url(friend: f), method: :put, class: 'btn btn-success'
+            = link_to 'Delete', f, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'
+br
+br
+h3
+  | Friends have added recently
+.col-md-4.col-md-offset-4
+  .row
+    - @frienden.each do |f|
+      - if f.status == 'waiting' && @recent_friend
+        .panel.panel1#link.text-center
+          = 'no one was added recently'.html_safe
+      - elsif f.status == 'accepted' && @recent_friend
+        .panel.panel1#link
+          .text-left.le
+            = link_to "#{f.user.name}", index_url(user: f.user)
+          .text-right.le
+            span
+              i
+                .glyphicon.glyphicon-ok
+
+
+br
+br
+h3
+  | people you might know
+.col-md-4.col-md-offset-4
+  .row
+    .panel.panel-default.panel1#link
+      - (User.all.uniq - [current_user]).each do |u|
+        .panel-heading
+          .text-left.le2
+            = link_to "#{u.name}"
+          .text-right.le2
+            = link_to 'Add Friend', friends_url(user: u), id: 'fade', class: 'btn btn-primary', controller: 'friends_controller', action: 'create', method: :post
+

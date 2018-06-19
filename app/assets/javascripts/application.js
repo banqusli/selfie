@@ -18,3 +18,6 @@
 //= require commontator/application
 //= require turbolinks
 //= require_tree .
+$('#fade').click(function () {
+    $(this).hide;
+})

@@ -29,6 +29,10 @@ h1, h2 {
   font-weight: bold;
 }
 
+h3 {
+  text-align: center;
+}
+
 .navbar-brand {
   a {
     font-weight: bold;
@@ -136,6 +140,10 @@ textarea {
   }
 }
 
+.panel1{
+  width: 590px;
+}
+
 .panel-body {
   padding-bottom: unset;
   padding-top: 6px;
@@ -172,6 +180,11 @@ textarea {
 
 .le1 {
   width: 385px;
+  display:inline-block;
+}
+
+.le2 {
+  width: 270px;
   display:inline-block;
 }
 

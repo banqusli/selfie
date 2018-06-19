@@ -18,9 +18,10 @@ class ApplicationController < ActionController::Base
   end
 
   def query_filter(objects)
+    id = params[:user]
     if user_signed_in?
-      filted = objects.where(user_id: current_user.id)
-      filted.order(created_at: :desc)
+      filter = objects.where(user_id: id)
+      filter.order(created_at: :desc)
     end
   end
 
@@ -35,6 +36,19 @@ class ApplicationController < ActionController::Base
     Notification.all.each do |delete|
     if @picture == delete.picture
       delete.destroy
+      end
+    end
+  end
+
+  def set_notification_for_friendRQ
+    @notification = Notification.create!(user_id: current_user.id, receiver: @friend.receiver, action: 'friend', info: 'send you a friend Request', picture: nil)
+    @notification.save
+  end
+
+  def delete_friend_RQ
+    Notification.all.each do |delete|
+      if delete.receiver == current_user && @friend.user == delete.user
+        delete.destroy
       end
     end
   end
