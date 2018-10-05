@@ -21,3 +21,32 @@
 $('#fade').click(function () {
     $(this).hide;
 })
+
+//$(document).ready(function () {
+//    App.chat.received(function(data)
+//    {
+//        console.log('u are in');
+//        console.log(data);
+//        $("#show").append(data)
+//    })
+//     $("#but").on('click',function () {
+//        msge = $("#msg").val()
+//        App.chat.send_message(msge)
+//        App.chat.received(msge)
+//    })
+//})
+
+$(document).ready(function () {
+
+    App.chat.received = function(data)
+    {
+        $("#show").append(data)
+    }
+
+    $("#but").on('click',function () {
+        msge = $("#msg").val()
+        App.chat.send_message(msge)
+        //App.chat.received(msge)
+
+    })
+})

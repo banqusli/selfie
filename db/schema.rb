@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180615074525) do
+ActiveRecord::Schema.define(version: 20180620094048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chats", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "commontator_comments", id: :serial, force: :cascade do |t|
     t.string "creator_type"
@@ -63,6 +69,15 @@ ActiveRecord::Schema.define(version: 20180615074525) do
     t.datetime "updated_at", null: false
     t.index ["receiver_id"], name: "index_friends_on_receiver_id"
     t.index ["user_id"], name: "index_friends_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "msg"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -125,6 +140,7 @@ ActiveRecord::Schema.define(version: 20180615074525) do
 
   add_foreign_key "friends", "users"
   add_foreign_key "friends", "users", column: "receiver_id"
+  add_foreign_key "messages", "users"
   add_foreign_key "notifications", "pictures"
   add_foreign_key "notifications", "users"
   add_foreign_key "notifications", "users", column: "receiver_id"

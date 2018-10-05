@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :chats
+  get 'chats/index', to: 'chats#index'
+  mount ActionCable.server => '/cable'
+  match 'chats', to: 'chats#index', via: :all
   resources :friends
   resources :notifications
   resources :pictures do
