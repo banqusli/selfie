@@ -43,7 +43,8 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'commontator', '~> 5.1.0'
 gem 'materialize-sass', '~> 1.0.0.rc1'
-gem 'therubyracer', '~> 0.12.3'
+#gem 'therubyracer', '~> 0.12.3'
+gem 'mini_racer', '~> 0.3.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

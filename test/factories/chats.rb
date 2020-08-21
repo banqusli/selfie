@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :chat do
-    content "MyString"
+    content {"MyString"}
   end
 end
