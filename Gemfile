@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'simple_form', '~> 4.0'
+gem 'simple_form', '~> 5.0'
 gem 'slim', '~> 3.0', '>= 3.0.9'
 gem 'paperclip', '~> 6.0.0'
 gem 'masonry-rails', '~> 0.2.4'
