@@ -38,7 +38,7 @@ body
           li = link_to 'Login', new_user_session_url
   p
     .alert
-      = alert
+
       - flash.each do |name, msg|
         = content_tag :div, msg, class: 'alert alert-info'
       end
