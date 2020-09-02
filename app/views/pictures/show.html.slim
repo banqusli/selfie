@@ -10,10 +10,10 @@
         = @picture.description
         br
       #link.panel-footer
-        .le.text-left
+        .le.text2left
           = link_to like_picture_path(@picture), method: :put, class: 'glyphicon glyphicon-thumbs-up' do
             .span.glyphicon.glyphicon.thumbs.up
           = @picture.get_upvotes.size
-        .le.text-right
+        .le.text2right
           = link_to "#{@picture.user.name}", index_url(user: @picture.user)
 

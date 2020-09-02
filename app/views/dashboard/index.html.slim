@@ -18,20 +18,19 @@
               = picture.title
             .panel-body
               .text-center
-                = link_to (image_tag picture.image.url), picture
+                = link_to (image_tag picture.image.url(:medium)), picture
               .text-left
                 = picture.description
             .panel-footer
-              .text-center
-                #link.le.text-left
-                  = '   '.html_safe + picture.user.name
-                #link.le.text-right
-                  .wid
-                    = link_to '', picture, class: 'glyphicon glyphicon-eye-open'
-                  .wid
-                    = link_to '', edit_picture_path(picture), class: 'glyphicon glyphicon-pencil'
-                  .wid
-                    = link_to '', picture, method: :delete, data: {confirm: 'Are you sure?'}, class: 'glyphicon glyphicon-trash'
+              #link.le.text2left
+                = '   '.html_safe + picture.user.name
+              #link.le.text2right
+                .wid
+                  = link_to '', picture, class: 'glyphicon glyphicon-eye-open'
+                .wid
+                  = link_to '', edit_picture_path(picture), class: 'glyphicon glyphicon-pencil'
+                .wid
+                  = link_to '', picture, method: :delete, data: {confirm: 'Are you sure?'}, class: 'glyphicon glyphicon-trash'
             #link.panel-footer
               .text-left.le1
                 = commontator_thread(picture) + '     '.html_safe

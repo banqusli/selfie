@@ -167,11 +167,19 @@ textarea {
 
 }
 .le {
-  width: 290px;
   display:inline-block;
   link{
     padding-right: 2px;
   }
+}
+
+.text2right{
+  width: 300px;
+  text-align: right;
+}
+
+.text2left{
+  text-align: left;
 }
 
 .display-in-same-line {

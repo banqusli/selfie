@@ -1,8 +1,7 @@
 h1
   | Pictures
 br
-#notice.text-center
-  = notice
+
 .col-md-4.col-md-offset-4
   .row
     #pic.transitions-enabled
@@ -12,17 +11,17 @@ br
             = picture.title
           .panel-body
             .text-center
-              = link_to (image_tag picture.image.url), picture
+              = link_to (image_tag picture.image.url(:medium)), picture
             .text-left
               = picture.description
           .panel-footer
             .text-center
-              #link.le.text-left
+              #link.le.text2left
                 = link_to like_picture_path(picture), method: :put, class: 'glyphicon glyphicon-thumbs-up' do
                   .span.glyphicon.glyphicon.thumbs.up
                 = picture.get_upvotes.size
                 = link_to " #{picture.user.name}", index_url(user: picture.user)
-              #link.le.text-right
+              #link.le.text2right
                 - if picture.user_id == current_user.id
                   .wid
                     = link_to '', picture, class: 'glyphicon glyphicon-eye-open'
