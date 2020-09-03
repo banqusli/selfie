@@ -6,9 +6,9 @@ h1
     - @frienden.each do |f|
       - if f.status == 'waiting'
         .panel.panel1#link
-          .text-left.le
+          .le.text2left.le2
             = link_to "#{f.user.name}", index_url(user: f.user)
-          .text-right.le
+          .le.text2right
             = link_to 'Accept', friends_url(friend: f), method: :put, class: 'btn btn-success'
             = link_to 'Delete', f, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'
 br
